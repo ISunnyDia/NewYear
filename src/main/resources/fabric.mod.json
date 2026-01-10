@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "newyear",
+  "version": "${version}",
+  "name": "NewYear",
+  "description": "Новогодний мод лол",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/newyear/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "ISunnyDia.mod.newyear.client.NewyearDataGenerator"
+    ],
+    "client": [
+      "ISunnyDia.mod.newyear.client.NewyearClient"
+    ],
+    "main": [
+      "ISunnyDia.mod.newyear.Newyear"
+    ]
+  },
+  "mixins": [
+    "newyear.mixins.json",
+    {
+      "config": "newyear.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
